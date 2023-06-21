@@ -39,7 +39,7 @@ npm install
 npm run dev
 ```
 
-The `npm start` command will Run the app in the development mode.
+The `npm run dev` command will Run the app in the development mode.
 Open [http://localhost:5176](http://localhost:5176) to view it in the browser.
 
 ## Development
