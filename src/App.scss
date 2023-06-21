@@ -67,6 +67,7 @@
 
 @media (width <= 740px) {
   ul {
+    padding-left: 0;
     flex-direction: column;
     align-items: center;
   }
