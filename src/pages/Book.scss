@@ -1,0 +1,11 @@
+.barber-select {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+@media (width <=1000px) {
+
+    .barber-select {
+        flex-direction: column;
+    }
+}

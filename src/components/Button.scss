@@ -1,0 +1,16 @@
+.button {
+    width: fit-content;
+    padding: 0.6em 1.2em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 3px;
+    &:hover {
+        background-color: black;
+        color: white;
+        transition: 0.1s background-color linear, 0.1s color linear
+    }
+}

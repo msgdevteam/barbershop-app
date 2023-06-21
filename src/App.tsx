@@ -1,35 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Link, Outlet, useLocation } from 'react-router-dom';
+import Logo from './assets/mushu-logo-2.jpg'
+import './App.scss'
+import { useEffect } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log(location);
+  }, [location]);
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <img src={Logo} className='logo' alt="logo" />
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div id="navigation">
+        <nav>
+          <ul>
+            <li className={location.pathname === '/' ? 'nav-active' : ''}>
+              <Link to={`/`}>Home</Link>
+            </li>
+            <li className={location.pathname === '/book' ? 'nav-active' : ''}>
+              <Link to={`/book`}>Book an appointment</Link>
+            </li>
+            <li className={location.pathname === '/cancellation-policy' ? 'nav-active' : ''}>
+              <Link to={`/cancellation-policy`}>Cancellation Policy</Link>
+            </li>
+            <li className={location.pathname === '/contact' ? 'nav-active' : ''}>
+              <Link to={`/contact`}>Contact</Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div id="body">
+        <Outlet />
+      </div>
+      <div id="footer">
+        <div className="footer-map">
+          <iframe width="450"
+            height="300"
+            loading="lazy"
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJrRCsqXdTBogRWVw47H2L-IQ&key=AIzaSyDQWlUSBOjihDV_JYEFhf4iulvscq1pkHQ">
+          </iframe>
+        </div>
+        <div className="footer-contact">
+          <h2>We're open 7 days a week (hours vary)</h2>
+          <h2><Link to={`/contact`}>Contact</Link></h2>
+          <h2>(608) 123-9765</h2>
+          <h2>104 Willy St</h2>
+          <h2>Madison, WI 53714</h2></div>
+      </div>
     </>
-  )
+  );
 }
 
 export default App
