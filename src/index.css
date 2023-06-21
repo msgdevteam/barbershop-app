@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
   text-transform: uppercase;
-  color: #213547;
+  color: black;
   background-color: #ffffff;
 
   font-synthesis: none;
@@ -15,7 +15,7 @@
 
 a {
   font-weight: 500;
-  color: rgba(82,82,82,.7);
+  color: black;
   text-decoration: inherit;
 }
 a:hover {
