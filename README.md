@@ -6,7 +6,7 @@
 
 ## Features
 
-- Built with [Vite.js](https://vitejs.dev/guide/)
+- Built with [Vite.js](https://vitejs.dev/guide/) - React v18
 - Routing provided by [React Router](https://reactrouter.com/)
 - Hosted on [Netlify](https://app.netlify.com/)
 
@@ -29,7 +29,7 @@ cd C:/Users/*your-user-goes-here*/Web Development
 Clone the git repository to your development folder:
 
 ```sh
-git clone https://github.com/msgdevteam/onpointflix.git
+git clone https://github.com/msgdevteam/barbershop-app.git
 ```
 
 To install and run the React App:
